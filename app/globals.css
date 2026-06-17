@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-charcoal: #1a1a2e;
+    --color-charcoal-light: #252544;
+    --color-ivory: #faf8f5;
+    --color-ivory-dark: #e8e4dc;
+    --color-gold: #c9a96e;
+    --color-gold-light: #d4ba8a;
+    --color-burgundy: #722f37;
+    --color-burgundy-light: #8e3a44;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-ivory text-charcoal font-body antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-lg bg-charcoal px-6 py-3 text-sm font-semibold text-ivory transition-all duration-200 hover:bg-charcoal-light focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-lg border-2 border-gold px-6 py-3 text-sm font-semibold text-charcoal transition-all duration-200 hover:bg-gold/10 focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center rounded-lg px-4 py-2 text-sm font-medium text-charcoal/70 transition-all duration-200 hover:text-charcoal hover:bg-charcoal/5;
+  }
+
+  .input-field {
+    @apply w-full rounded-lg border border-charcoal/15 bg-white px-4 py-3 text-sm text-charcoal placeholder:text-charcoal/35 transition-all duration-200 focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/25;
+  }
+
+  .card {
+    @apply rounded-xl border border-charcoal/8 bg-white p-6 shadow-sm;
+  }
+
+  .section-padding {
+    @apply px-6 py-24 md:px-12 lg:px-24;
+  }
+}
